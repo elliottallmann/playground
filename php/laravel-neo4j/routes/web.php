@@ -13,6 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::controller(\App\Http\Controllers\UsersController::class)->group(function() {
+    Route::post('/users', 'store');
+    Route::get('/users', 'index');
+});
+
+Route::controller(\App\Http\Controllers\LeagueController::class)->group(function() {
+   Route::post('/leagues', 'store');
+   Route::get('/leagues', 'index');
+});
+
+
 Route::get('/', function () {
     return view('welcome');
 });
