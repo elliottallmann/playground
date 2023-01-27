@@ -175,6 +175,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * CUSTOM SERVICE PROVIDERS BELOW
+         */
+        Vinelab\NeoEloquent\NeoEloquentServiceProvider::class,
+
     ],
 
     /*
@@ -229,7 +234,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
     ],
 
 ];
